@@ -1,15 +1,9 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
-
-import 'theme.dart';
-import 'theme_wrapper.dart';
 
 export 'theme.dart';
 export 'theme_wrapper.dart';
 
-typedef NeumorphicThemeUpdater = NeumorphicThemeData Function(
-    NeumorphicThemeData? current);
+typedef NeumorphicThemeUpdater = NeumorphicThemeData Function(NeumorphicThemeData? current);
 
 class NeumorphicThemeInherited extends InheritedWidget {
   final Widget child;
@@ -17,10 +11,7 @@ class NeumorphicThemeInherited extends InheritedWidget {
   final ValueChanged<ThemeWrapper> onChanged;
 
   NeumorphicThemeInherited(
-      {Key? key,
-      required this.child,
-      required this.value,
-      required this.onChanged})
+      {Key? key, required this.child, required this.value, required this.onChanged})
       : super(key: key, child: child);
 
   @override

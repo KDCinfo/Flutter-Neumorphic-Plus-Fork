@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 
 class NeumorphicApp extends StatelessWidget {
@@ -96,8 +95,7 @@ class NeumorphicApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final materialTheme = this.materialTheme ?? _getMaterialTheme(theme);
-    final materialDarkTheme =
-        this.materialDarkTheme ?? _getMaterialTheme(darkTheme);
+    final materialDarkTheme = this.materialDarkTheme ?? _getMaterialTheme(darkTheme);
     return NeumorphicTheme(
       theme: theme,
       darkTheme: darkTheme,

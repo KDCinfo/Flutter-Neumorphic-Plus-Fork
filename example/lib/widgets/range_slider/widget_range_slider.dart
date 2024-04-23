@@ -1,11 +1,12 @@
-import 'package:example/lib/Code.dart';
-import 'package:example/lib/ThemeConfigurator.dart';
-import 'package:example/lib/color_selector.dart';
-import 'package:example/lib/top_bar.dart';
+import 'package:flutter_neumorphic_example/lib/codex.dart';
+import 'package:flutter_neumorphic_example/lib/theme_configurator.dart';
+import 'package:flutter_neumorphic_example/lib/color_selector.dart';
+import 'package:flutter_neumorphic_example/lib/top_bar.dart';
+
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 
 class RangeSliderWidgetPage extends StatefulWidget {
-  RangeSliderWidgetPage({Key? key}) : super(key: key);
+  const RangeSliderWidgetPage({super.key});
 
   @override
   createState() => _RangeWidgetPageState();
@@ -16,7 +17,7 @@ class _RangeWidgetPageState extends State<RangeSliderWidgetPage> {
   Widget build(BuildContext context) {
     return NeumorphicTheme(
       themeMode: ThemeMode.light,
-      theme: NeumorphicThemeData(
+      theme: const NeumorphicThemeData(
         lightSource: LightSource.topLeft,
         accentColor: NeumorphicColors.accent,
         depth: 4,
@@ -36,9 +37,9 @@ class _PageState extends State<_Page> {
   @override
   Widget build(BuildContext context) {
     return NeumorphicBackground(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       child: Scaffold(
-        appBar: TopBar(
+        appBar: const TopBar(
           title: "Range Slider",
           actions: <Widget>[
             ThemeConfigurator(),
@@ -53,7 +54,7 @@ class _PageState extends State<_Page> {
             children: [
               _DefaultWidget(),
               _ColorWidget(),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
             ],
           ),
         ),
@@ -72,7 +73,7 @@ class _DefaultWidgetState extends State<_DefaultWidget> {
   double highVal = 70;
 
   Widget _buildCode(BuildContext context) {
-    return Code("""
+    return const Code("""
   double lowVal = 30;
   double highVal = 70;
 
@@ -99,14 +100,14 @@ class _DefaultWidgetState extends State<_DefaultWidget> {
 
   Widget _buildWidget(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       child: Row(
         children: <Widget>[
           Text(
             "Default",
             style: TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
           ),
-          SizedBox(width: 12),
+          const SizedBox(width: 12),
           Expanded(
             child: NeumorphicRangeSlider(
               valueLow: lowVal,
@@ -125,7 +126,7 @@ class _DefaultWidgetState extends State<_DefaultWidget> {
               },
             ),
           ),
-          SizedBox(width: 12),
+          const SizedBox(width: 12),
           Text(
             "${lowVal.round()} - ${highVal.round()}",
             style: TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
@@ -135,6 +136,7 @@ class _DefaultWidgetState extends State<_DefaultWidget> {
     );
   }
 
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -156,7 +158,7 @@ class _ColorWidgetState extends State<_ColorWidget> {
   double highVal = 80;
 
   Widget _buildCode(BuildContext context) {
-    return Code("""
+    return const Code("""
 double lowVal = 30;
 double highVal = 80;
 
@@ -191,12 +193,12 @@ double highVal = 80;
 
   Widget _buildWidget(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       child: Column(
         children: <Widget>[
           Row(
             children: <Widget>[
-              Text("Accent : "),
+              const Text("Accent : "),
               ColorSelector(
                 onColorChanged: (color) {
                   setState(() {
@@ -205,8 +207,8 @@ double highVal = 80;
                 },
                 color: accent,
               ),
-              SizedBox(width: 12),
-              Text("Variant : "),
+              const SizedBox(width: 12),
+              const Text("Variant : "),
               ColorSelector(
                 onColorChanged: (color) {
                   setState(() {
@@ -217,15 +219,14 @@ double highVal = 80;
               ),
             ],
           ),
-          SizedBox(height: 12),
+          const SizedBox(height: 12),
           Row(
             children: <Widget>[
               Text(
                 "Default",
-                style:
-                    TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
+                style: TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
               ),
-              SizedBox(width: 12),
+              const SizedBox(width: 12),
               Expanded(
                 child: NeumorphicRangeSlider(
                   style: RangeSliderStyle(
@@ -248,11 +249,10 @@ double highVal = 80;
                   },
                 ),
               ),
-              SizedBox(width: 12),
+              const SizedBox(width: 12),
               Text(
                 "${lowVal.round()} - ${highVal.round()}",
-                style:
-                    TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
+                style: TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
               ),
             ],
           ),
@@ -261,6 +261,7 @@ double highVal = 80;
     );
   }
 
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,

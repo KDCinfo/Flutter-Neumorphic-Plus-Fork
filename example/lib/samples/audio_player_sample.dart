@@ -1,24 +1,25 @@
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 
 class AudioPlayerSample extends StatefulWidget {
+  const AudioPlayerSample({super.key});
+
   @override
-  _AudioPlayerSampleState createState() => _AudioPlayerSampleState();
+  AudioPlayerSampleState createState() => AudioPlayerSampleState();
 }
 
-class _AudioPlayerSampleState extends State<AudioPlayerSample> {
+class AudioPlayerSampleState extends State<AudioPlayerSample> {
   @override
   Widget build(BuildContext context) {
     return NeumorphicTheme(
         themeMode: ThemeMode.light,
-        theme: NeumorphicThemeData(
+        theme: const NeumorphicThemeData(
           defaultTextColor: Color(0xFF3E3E3E),
           baseColor: Color(0xFFDDE6E8),
           intensity: 0.5,
           lightSource: LightSource.topLeft,
           depth: 10,
         ),
-        darkTheme: neumorphicDefaultDarkTheme.copyWith(
-            defaultTextColor: Colors.white70),
+        darkTheme: neumorphicDefaultDarkTheme.copyWith(defaultTextColor: Colors.white70),
         child: _Page());
   }
 }
@@ -38,15 +39,15 @@ class __PageState extends State<_Page> {
         child: NeumorphicBackground(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 14),
+              const SizedBox(height: 14),
               _buildTopBar(context),
-              SizedBox(height: 80),
+              const SizedBox(height: 80),
               _buildImage(context),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               _buildTitle(context),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               _buildSeekBar(context),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               _buildControlsBar(context),
             ],
           ),
@@ -68,7 +69,7 @@ class __PageState extends State<_Page> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              style: NeumorphicStyle(
+              style: const NeumorphicStyle(
                 shape: NeumorphicShape.flat,
                 boxShape: NeumorphicBoxShape.circle(),
               ),
@@ -82,8 +83,7 @@ class __PageState extends State<_Page> {
             alignment: Alignment.center,
             child: Text(
               "Now Playing",
-              style:
-                  TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
+              style: TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
             ),
           ),
           Align(
@@ -97,7 +97,7 @@ class __PageState extends State<_Page> {
                       _useDark ? ThemeMode.dark : ThemeMode.light;
                 });
               },
-              style: NeumorphicStyle(
+              style: const NeumorphicStyle(
                 shape: NeumorphicShape.flat,
                 boxShape: NeumorphicBoxShape.circle(),
               ),
@@ -114,10 +114,10 @@ class __PageState extends State<_Page> {
 
   Widget _buildImage(BuildContext context) {
     return Neumorphic(
-      style: NeumorphicStyle(
+      style: const NeumorphicStyle(
         boxShape: NeumorphicBoxShape.circle(),
       ),
-      child: Container(
+      child: SizedBox(
           height: 200,
           width: 200,
           child: Image.asset(
@@ -160,19 +160,17 @@ class __PageState extends State<_Page> {
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "2.00",
-                    style: TextStyle(
-                        color: NeumorphicTheme.defaultTextColor(context)),
+                    style: TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
                   )),
               Align(
                   alignment: Alignment.centerRight,
                   child: Text(
                     "3.14",
-                    style: TextStyle(
-                        color: NeumorphicTheme.defaultTextColor(context)),
+                    style: TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
                   )),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           NeumorphicSlider(
@@ -194,7 +192,7 @@ class __PageState extends State<_Page> {
         NeumorphicButton(
           padding: const EdgeInsets.all(18.0),
           onPressed: () {},
-          style: NeumorphicStyle(
+          style: const NeumorphicStyle(
             shape: NeumorphicShape.flat,
             boxShape: NeumorphicBoxShape.circle(),
           ),
@@ -207,7 +205,7 @@ class __PageState extends State<_Page> {
         NeumorphicButton(
           padding: const EdgeInsets.all(24.0),
           onPressed: () {},
-          style: NeumorphicStyle(
+          style: const NeumorphicStyle(
             shape: NeumorphicShape.flat,
             boxShape: NeumorphicBoxShape.circle(),
           ),
@@ -221,7 +219,7 @@ class __PageState extends State<_Page> {
         NeumorphicButton(
           padding: const EdgeInsets.all(18.0),
           onPressed: () {},
-          style: NeumorphicStyle(
+          style: const NeumorphicStyle(
             shape: NeumorphicShape.flat,
             boxShape: NeumorphicBoxShape.circle(),
           ),

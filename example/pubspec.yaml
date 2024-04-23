@@ -1,4 +1,4 @@
-name: example
+name: flutter_neumorphic_example
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -13,6 +13,8 @@ description: A new Flutter project.
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 version: 1.0.0+1
 
+publish_to: none
+
 environment:
   sdk: ">=3.0.0"
 
@@ -20,12 +22,13 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_neumorphic:
+  flutter_neumorphic_plus:
     path: ../
 
   flutter_colorpicker: ^1.0.0
 
 dev_dependencies:
+  flutter_lints: ^3.0.2
   flutter_test:
     sdk: flutter
 

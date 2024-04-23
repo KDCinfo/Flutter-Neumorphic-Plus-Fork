@@ -1,12 +1,15 @@
-import 'package:example/lib/ThemeConfigurator.dart';
-import 'package:example/lib/top_bar.dart';
+import 'package:flutter_neumorphic_example/lib/theme_configurator.dart';
+import 'package:flutter_neumorphic_example/lib/top_bar.dart';
+
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 
 class GalaxySample extends StatelessWidget {
+  const GalaxySample({super.key});
+
   @override
   Widget build(BuildContext context) {
     return NeumorphicTheme(
-      theme: NeumorphicThemeData(
+      theme: const NeumorphicThemeData(
         baseColor: Color(0xFFE5E5E5),
         depth: 20,
         intensity: 1,
@@ -15,7 +18,7 @@ class GalaxySample extends StatelessWidget {
       themeMode: ThemeMode.light,
       child: Material(
         child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 gradient: LinearGradient(
               colors: [
                 Color(0xFFF1F1F1),
@@ -38,26 +41,23 @@ class _Page extends StatefulWidget {
 class _PageState extends State<_Page> {
   Widget _letter(String letter) {
     return Text(letter,
-        style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w700,
-            fontFamily: 'Samsung',
-            fontSize: 80));
+        style: const TextStyle(
+            color: Colors.black, fontWeight: FontWeight.w700, fontFamily: 'Samsung', fontSize: 80));
   }
 
   Widget _firstBox() {
     return Neumorphic(
-      margin: EdgeInsets.symmetric(horizontal: 4),
+      margin: const EdgeInsets.symmetric(horizontal: 4),
       style: NeumorphicStyle(
         boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(8)),
       ),
       child: Neumorphic(
-        style: NeumorphicStyle(
+        style: const NeumorphicStyle(
           depth: -1,
           oppositeShadowLightSource: true,
         ),
-        padding: EdgeInsets.all(2),
-        child: SizedBox(
+        padding: const EdgeInsets.all(2),
+        child: const SizedBox(
           width: 40,
           height: 60,
         ),
@@ -76,12 +76,12 @@ class _PageState extends State<_Page> {
             boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(8)),
           ),
           child: Neumorphic(
-            style: NeumorphicStyle(
+            style: const NeumorphicStyle(
               depth: -1,
               oppositeShadowLightSource: true,
               lightSource: LightSource.topLeft,
             ),
-            child: SizedBox(
+            child: const SizedBox(
               width: 50,
               height: 50,
             ),
@@ -102,8 +102,8 @@ class _PageState extends State<_Page> {
             left: 0,
             right: 0,
             child: Container(
-              margin: EdgeInsets.only(left: 12, right: 12, top: 10),
-              child: TopBar(
+              margin: const EdgeInsets.only(left: 12, right: 12, top: 10),
+              child: const TopBar(
                 actions: <Widget>[
                   ThemeConfigurator(),
                 ],

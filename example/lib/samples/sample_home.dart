@@ -1,20 +1,23 @@
-import 'package:example/lib/top_bar.dart';
-import 'package:example/samples/audio_player_sample.dart';
-import 'package:example/samples/calculator_sample.dart';
-import 'package:example/samples/clock/clock_sample.dart';
-import 'package:example/samples/credit_card_sample.dart';
-import 'package:example/samples/form_sample.dart';
-import 'package:example/samples/testla_sample.dart';
+import 'package:flutter_neumorphic_example/lib/top_bar.dart';
+import 'package:flutter_neumorphic_example/samples/audio_player_sample.dart';
+import 'package:flutter_neumorphic_example/samples/calculator_sample.dart';
+import 'package:flutter_neumorphic_example/samples/clock/clock_sample.dart';
+import 'package:flutter_neumorphic_example/samples/credit_card_sample.dart';
+import 'package:flutter_neumorphic_example/samples/form_sample.dart';
+import 'package:flutter_neumorphic_example/samples/testla_sample.dart';
+
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 
 import 'galaxy_sample.dart';
 import 'widgets_sample.dart';
 
 class SamplesHome extends StatelessWidget {
+  const SamplesHome({super.key});
+
   Widget _buildButton({String? text, VoidCallback? onClick}) {
     return NeumorphicButton(
-      margin: EdgeInsets.only(bottom: 12),
-      padding: EdgeInsets.symmetric(
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.symmetric(
         vertical: 18,
         horizontal: 24,
       ),
@@ -24,16 +27,16 @@ class SamplesHome extends StatelessWidget {
           BorderRadius.circular(12),
         ),
       ),
-      child: Center(child: Text(text ?? '')),
       onPressed: onClick,
+      child: Center(child: Text(text ?? '')),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return NeumorphicTheme(
-      theme: NeumorphicThemeData(depth: 8),
-      darkTheme: NeumorphicThemeData(depth: 8),
+      theme: const NeumorphicThemeData(depth: 8),
+      darkTheme: const NeumorphicThemeData(depth: 8),
       child: Scaffold(
         backgroundColor: NeumorphicColors.background,
         body: SafeArea(
@@ -45,69 +48,61 @@ class SamplesHome extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  TopBar(),
+                  const TopBar(),
                   _buildButton(
                       text: "Tesla",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return TeslaSample();
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                          return const TeslaSample();
                         }));
                       }),
                   _buildButton(
                       text: "Audio Player",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return AudioPlayerSample();
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                          return const AudioPlayerSample();
                         }));
                       }),
                   _buildButton(
                       text: "Clock",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return ClockSample();
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                          return const ClockSample();
                         }));
                       }),
                   _buildButton(
                       text: "Galaxy",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return GalaxySample();
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                          return const GalaxySample();
                         }));
                       }),
                   _buildButton(
                       text: "Calculator",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return CalculatorSample();
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                          return const CalculatorSample();
                         }));
                       }),
                   _buildButton(
                       text: "Form",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return FormSample();
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                          return const FormSample();
                         }));
                       }),
                   _buildButton(
                       text: "CreditCard",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return CreditCardSample();
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                          return const CreditCardSample();
                         }));
                       }),
                   _buildButton(
                       text: "Widgets",
                       onClick: () {
-                        Navigator.of(context)
-                            .push(MaterialPageRoute(builder: (context) {
-                          return WidgetsSample();
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                          return const WidgetsSample();
                         }));
                       }),
                 ],

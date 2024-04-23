@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'dart:ui';
 
 import '../../../flutter_neumorphic.dart';
 
@@ -49,8 +48,7 @@ abstract class AbstractNeumorphicEmbossPainterCache {
     if (_cacheStyleDepth != newStyleDepth) {
       _cacheStyleDepth = newStyleDepth;
 
-      final depth =
-          newStyleDepth.abs().clamp(0.0, _cacheRadius ?? 0 / radiusFactor);
+      final depth = newStyleDepth.abs().clamp(0.0, _cacheRadius ?? 0 / radiusFactor);
       _depth = depth;
 
       this._updateMaskFilter(newDepth: depth);
@@ -79,15 +77,12 @@ abstract class AbstractNeumorphicEmbossPainterCache {
     return false;
   }
 
-  bool?
-      _cacheOppositeShadowLightSource; //store the old style lightsource property
+  bool? _cacheOppositeShadowLightSource; //store the old style lightsource property
   LightSource? _cacheLightSource; //store the old style lightsource
 
   LightSource? _lightSource; //used to draw
-  LightSource get lightSource =>
-      _lightSource ?? LightSource.bottom; //used to draw
-  bool updateLightSource(
-      LightSource newLightSource, bool newOppositeShadowLightSource) {
+  LightSource get lightSource => _lightSource ?? LightSource.bottom; //used to draw
+  bool updateLightSource(LightSource newLightSource, bool newOppositeShadowLightSource) {
     bool invalidateLightSource = false;
     if (newLightSource != _cacheLightSource) {
       _cacheLightSource = newLightSource;
@@ -131,11 +126,9 @@ abstract class AbstractNeumorphicEmbossPainterCache {
   Color? _shadowDarkColor;
   Color? get shadowDarkColor => _shadowDarkColor;
 
-  Color generateShadowLightColor(
-      {required Color color, required double intensity});
+  Color generateShadowLightColor({required Color color, required double intensity});
 
-  Color generateShadowDarkColor(
-      {required Color color, required double intensity});
+  Color generateShadowDarkColor({required Color color, required double intensity});
 
   bool updateShadowColor({
     required Color newShadowLightColorEmboss,
@@ -150,11 +143,10 @@ abstract class AbstractNeumorphicEmbossPainterCache {
       _styleIntensity = newIntensity;
     }
     //light
-    if (invalidateIntensity ||
-        _styleShadowLightColor != newShadowLightColorEmboss) {
+    if (invalidateIntensity || _styleShadowLightColor != newShadowLightColorEmboss) {
       _styleShadowLightColor = newShadowLightColorEmboss;
-      _shadowLightColor = this.generateShadowLightColor(
-          color: newShadowLightColorEmboss, intensity: newIntensity);
+      _shadowLightColor =
+          this.generateShadowLightColor(color: newShadowLightColorEmboss, intensity: newIntensity);
 
       invalidate = true;
     }

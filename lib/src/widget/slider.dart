@@ -1,8 +1,4 @@
-import 'package:flutter/widgets.dart';
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
-
-import 'container.dart';
-import 'progress.dart';
 
 typedef void NeumorphicSliderListener(double percent);
 
@@ -143,8 +139,7 @@ class _NeumorphicSliderState extends State<NeumorphicSlider> {
           final tapPos = details.localPosition;
           final newPercent = tapPos.dx / constraints.maxWidth;
           final newValue =
-              ((widget.min + (widget.max - widget.min) * newPercent))
-                  .clamp(widget.min, widget.max);
+              ((widget.min + (widget.max - widget.min) * newPercent)).clamp(widget.min, widget.max);
 
           if (widget.onChanged != null) {
             widget.onChanged!(newValue);

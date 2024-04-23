@@ -1,10 +1,11 @@
-import 'package:example/lib/Code.dart';
-import 'package:example/lib/ThemeConfigurator.dart';
-import 'package:example/lib/top_bar.dart';
+import 'package:flutter_neumorphic_example/lib/codex.dart';
+import 'package:flutter_neumorphic_example/lib/theme_configurator.dart';
+import 'package:flutter_neumorphic_example/lib/top_bar.dart';
+
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 
 class TipsBorderPage extends StatefulWidget {
-  TipsBorderPage({Key? key}) : super(key: key);
+  const TipsBorderPage({super.key});
 
   @override
   createState() => _WidgetPageState();
@@ -15,7 +16,7 @@ class _WidgetPageState extends State<TipsBorderPage> {
   Widget build(BuildContext context) {
     return NeumorphicTheme(
       themeMode: ThemeMode.light,
-      theme: NeumorphicThemeData(
+      theme: const NeumorphicThemeData(
         lightSource: LightSource.topLeft,
         accentColor: NeumorphicColors.accent,
         depth: 4,
@@ -34,7 +35,7 @@ class _Page extends StatefulWidget {
 class _PageState extends State<_Page> {
   @override
   Widget build(BuildContext context) {
-    return NeumorphicBackground(
+    return const NeumorphicBackground(
       padding: EdgeInsets.all(8),
       child: Scaffold(
         appBar: TopBar(
@@ -147,10 +148,7 @@ class _CustomWidget extends StatefulWidget {
   final NeumorphicStyle firstStyle;
   final NeumorphicStyle secondStyle;
 
-  _CustomWidget(
-      {required this.title,
-      required this.firstStyle,
-      required this.secondStyle});
+  const _CustomWidget({required this.title, required this.firstStyle, required this.secondStyle});
 
   @override
   createState() => _CustomWidgetState();
@@ -181,7 +179,7 @@ Neumorphic(
 
   Widget _buildWidget(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -189,55 +187,53 @@ Neumorphic(
           Row(
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(left: 12, right: 12),
+                margin: const EdgeInsets.only(left: 12, right: 12),
                 width: 100,
                 child: Text(
                   widget.title,
-                  style: TextStyle(
-                      color: NeumorphicTheme.defaultTextColor(context)),
+                  style: TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
                 ),
               ),
               Neumorphic(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 style: widget.firstStyle.copyWith(
-                  boxShape: NeumorphicBoxShape.circle(),
+                  boxShape: const NeumorphicBoxShape.circle(),
                 ),
                 child: Neumorphic(
                   style: widget.secondStyle.copyWith(
-                    boxShape: NeumorphicBoxShape.circle(),
+                    boxShape: const NeumorphicBoxShape.circle(),
                   ),
-                  child: SizedBox(
+                  child: const SizedBox(
                     height: 100,
                     width: 100,
                   ),
                 ),
               ),
-              SizedBox(width: 12),
+              const SizedBox(width: 12),
             ],
           ),
-          SizedBox(height: 12),
+          const SizedBox(height: 12),
           Row(
             children: <Widget>[
               Container(
-                margin: EdgeInsets.only(left: 12, right: 12),
+                margin: const EdgeInsets.only(left: 12, right: 12),
                 width: 100,
                 child: Text(
                   "opposite\nchild\nlightsource",
-                  style: TextStyle(
-                      color: NeumorphicTheme.defaultTextColor(context)),
+                  style: TextStyle(color: NeumorphicTheme.defaultTextColor(context)),
                 ),
               ),
               Neumorphic(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 style: widget.firstStyle.copyWith(
-                  boxShape: NeumorphicBoxShape.circle(),
+                  boxShape: const NeumorphicBoxShape.circle(),
                 ),
                 child: Neumorphic(
                   style: widget.secondStyle.copyWith(
-                    boxShape: NeumorphicBoxShape.circle(),
+                    boxShape: const NeumorphicBoxShape.circle(),
                     oppositeShadowLightSource: true,
                   ),
-                  child: SizedBox(
+                  child: const SizedBox(
                     height: 100,
                     width: 100,
                   ),
@@ -250,6 +246,7 @@ Neumorphic(
     );
   }
 
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,

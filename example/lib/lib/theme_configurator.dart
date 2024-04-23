@@ -1,21 +1,21 @@
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 
-import 'ThemeColorSelector.dart';
+import 'theme_color_selector.dart';
 
 class ThemeConfigurator extends StatelessWidget {
+  const ThemeConfigurator({super.key});
+
   @override
   Widget build(BuildContext context) {
     return NeumorphicButton(
-      padding: EdgeInsets.all(18),
-      style: NeumorphicStyle(
+      padding: const EdgeInsets.all(18),
+      style: const NeumorphicStyle(
         shape: NeumorphicShape.flat,
         boxShape: NeumorphicBoxShape.circle(),
       ),
       child: Icon(
         Icons.settings,
-        color: NeumorphicTheme.isUsingDark(context)
-            ? Colors.white70
-            : Colors.black87,
+        color: NeumorphicTheme.isUsingDark(context) ? Colors.white70 : Colors.black87,
       ),
       onPressed: () {
         _changeColor(context);
@@ -49,7 +49,7 @@ class ThemeConfigurator extends StatelessWidget {
 class _ThemeConfiguratorDialog extends StatefulWidget {
   final BuildContext contextContainingTheme;
 
-  _ThemeConfiguratorDialog({required this.contextContainingTheme});
+  const _ThemeConfiguratorDialog({required this.contextContainingTheme});
 
   @override
   _ThemeConfiguratorState createState() => _ThemeConfiguratorState();
@@ -73,7 +73,7 @@ class _ThemeConfiguratorState extends State<_ThemeConfiguratorDialog> {
     final intensity = NeumorphicTheme.intensity(widget.contextContainingTheme);
     return Row(
       children: <Widget>[
-        Padding(
+        const Padding(
           padding: EdgeInsets.only(left: 12),
           child: Text("Intensity"),
         ),
@@ -95,8 +95,8 @@ class _ThemeConfiguratorState extends State<_ThemeConfiguratorDialog> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(right: 12),
-          child: Container(
+          padding: const EdgeInsets.only(right: 12),
+          child: SizedBox(
             width: 40,
             child: Text(((intensity * 100).floor() / 100).toString()),
           ),
@@ -110,7 +110,7 @@ class _ThemeConfiguratorState extends State<_ThemeConfiguratorDialog> {
 
     return Row(
       children: <Widget>[
-        Padding(
+        const Padding(
           padding: EdgeInsets.only(left: 12),
           child: Text("Depth"),
         ),
@@ -130,8 +130,8 @@ class _ThemeConfiguratorState extends State<_ThemeConfiguratorDialog> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(right: 12),
-          child: Container(
+          padding: const EdgeInsets.only(right: 12),
+          child: SizedBox(
             width: 40,
             child: Text(depth.floor().toString()),
           ),

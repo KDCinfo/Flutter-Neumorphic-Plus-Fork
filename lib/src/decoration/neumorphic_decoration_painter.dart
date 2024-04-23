@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
@@ -56,20 +55,16 @@ class NeumorphicDecorationPainter extends BoxPainter {
   void _updateCache(Offset offset, ImageConfiguration configuration) {
     bool invalidateSize = false;
     if (configuration.size != null) {
-      invalidateSize = this
-          ._cache
-          .updateSize(newOffset: offset, newSize: configuration.size!);
+      invalidateSize = this._cache.updateSize(newOffset: offset, newSize: configuration.size!);
       if (invalidateSize) {
-        _cache.updatePath(
-            newPath:
-                shape.customShapePathProvider.getPath(configuration.size!));
+        _cache.updatePath(newPath: shape.customShapePathProvider.getPath(configuration.size!));
       }
     }
 
     bool invalidateLightSource = false;
     if (style.color != null) {
-      invalidateLightSource = this._cache.updateLightSource(
-          style.lightSource, style.oppositeShadowLightSource);
+      invalidateLightSource =
+          this._cache.updateLightSource(style.lightSource, style.oppositeShadowLightSource);
     }
 
     bool invalidateColor = false;
@@ -136,8 +131,7 @@ class NeumorphicDecorationPainter extends BoxPainter {
     }
   }
 
-  void _drawElement(
-      {required Canvas canvas, required Offset offset, required Path path}) {
+  void _drawElement({required Canvas canvas, required Offset offset, required Path path}) {
     if (drawBackground) {
       _drawBackground(offset: offset, canvas: canvas, path: path);
     }
@@ -149,8 +143,7 @@ class NeumorphicDecorationPainter extends BoxPainter {
     }
   }
 
-  void _drawBorder(
-      {required Canvas canvas, required Offset offset, required Path path}) {
+  void _drawBorder({required Canvas canvas, required Offset offset, required Path path}) {
     if (style.border.width != null && style.border.width! > 0) {
       canvas
         ..save()
@@ -164,8 +157,7 @@ class NeumorphicDecorationPainter extends BoxPainter {
     }
   }
 
-  void _drawBackground(
-      {required Canvas canvas, required Offset offset, required Path path}) {
+  void _drawBackground({required Canvas canvas, required Offset offset, required Path path}) {
     canvas
       ..save()
       ..translate(offset.dx, offset.dy)
@@ -173,13 +165,11 @@ class NeumorphicDecorationPainter extends BoxPainter {
       ..restore();
   }
 
-  void _drawShadow(
-      {required Canvas canvas, required Offset offset, required Path path}) {
+  void _drawShadow({required Canvas canvas, required Offset offset, required Path path}) {
     if (style.depth != null && style.depth!.abs() >= 0.1) {
       canvas
         ..saveLayer(_cache.layerRect, _whiteShadowPaint)
-        ..translate(offset.dx + _cache.depthOffset.dx,
-            offset.dy + _cache.depthOffset.dy)
+        ..translate(offset.dx + _cache.depthOffset.dx, offset.dy + _cache.depthOffset.dy)
         ..drawPath(path, _whiteShadowPaint)
         ..translate(-_cache.depthOffset.dx, -_cache.depthOffset.dy)
         ..drawPath(path, _whiteShadowMaskPaint)
@@ -187,8 +177,7 @@ class NeumorphicDecorationPainter extends BoxPainter {
 
       canvas
         ..saveLayer(_cache.layerRect, _blackShadowPaint)
-        ..translate(offset.dx - _cache.depthOffset.dx,
-            offset.dy - _cache.depthOffset.dy)
+        ..translate(offset.dx - _cache.depthOffset.dx, offset.dy - _cache.depthOffset.dy)
         ..drawPath(path, _blackShadowPaint)
         ..translate(_cache.depthOffset.dx, _cache.depthOffset.dy)
         ..drawPath(path, _blackShadowMaskPaint)
@@ -196,10 +185,8 @@ class NeumorphicDecorationPainter extends BoxPainter {
     }
   }
 
-  void _drawGradient(
-      {required Canvas canvas, required Offset offset, required Path path}) {
-    if (style.shape == NeumorphicShape.concave ||
-        style.shape == NeumorphicShape.convex) {
+  void _drawGradient({required Canvas canvas, required Offset offset, required Path path}) {
+    if (style.shape == NeumorphicShape.concave || style.shape == NeumorphicShape.convex) {
       final pathRect = path.getBounds();
 
       _gradientPaint

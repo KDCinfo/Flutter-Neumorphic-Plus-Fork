@@ -1,8 +1,5 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
 import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 
 @immutable
@@ -78,10 +75,7 @@ class NeumorphicAppBarIcons {
 
   @override
   int get hashCode =>
-      backIcon.hashCode ^
-      closeIcon.hashCode ^
-      menuIcon.hashCode ^
-      forwardIcon.hashCode;
+      backIcon.hashCode ^ closeIcon.hashCode ^ menuIcon.hashCode ^ forwardIcon.hashCode;
 
   @override
   String toString() =>

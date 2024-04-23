@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/widgets.dart';
 
 import 'container.dart';
@@ -158,8 +156,7 @@ class NeumorphicIndicator extends StatefulWidget {
       curve.hashCode;
 }
 
-class _NeumorphicIndicatorState extends State<NeumorphicIndicator>
-    with TickerProviderStateMixin {
+class _NeumorphicIndicatorState extends State<NeumorphicIndicator> with TickerProviderStateMixin {
   double oldPercent = 0;
   late AnimationController _controller;
   late Animation _animation;
@@ -168,8 +165,7 @@ class _NeumorphicIndicatorState extends State<NeumorphicIndicator>
   void initState() {
     super.initState();
     _controller = AnimationController(vsync: this, duration: widget.duration);
-    _animation = Tween<double>(begin: widget.percent, end: oldPercent)
-        .animate(_controller);
+    _animation = Tween<double>(begin: widget.percent, end: oldPercent).animate(_controller);
   }
 
   @override
@@ -209,16 +205,13 @@ class _NeumorphicIndicatorState extends State<NeumorphicIndicator>
             animation: _animation,
             builder: (_, __) {
               return FractionallySizedBox(
-                heightFactor: widget.orientation ==
-                        NeumorphicIndicatorOrientation.vertical
+                heightFactor: widget.orientation == NeumorphicIndicatorOrientation.vertical
                     ? _animation.value
                     : 1,
-                widthFactor: widget.orientation ==
-                        NeumorphicIndicatorOrientation.horizontal
+                widthFactor: widget.orientation == NeumorphicIndicatorOrientation.horizontal
                     ? _animation.value
                     : 1,
-                alignment: widget.orientation ==
-                        NeumorphicIndicatorOrientation.horizontal
+                alignment: widget.orientation == NeumorphicIndicatorOrientation.horizontal
                     ? Alignment.centerLeft
                     : Alignment.bottomCenter,
                 child: Padding(
@@ -226,14 +219,12 @@ class _NeumorphicIndicatorState extends State<NeumorphicIndicator>
                   child: Neumorphic(
                     style: NeumorphicStyle(
                       boxShape: NeumorphicBoxShape.stadium(),
-                      lightSource:
-                          widget.style.lightSource ?? theme.lightSource,
+                      lightSource: widget.style.lightSource ?? theme.lightSource,
                     ),
                     child: Container(
                         decoration: BoxDecoration(
                       gradient: LinearGradient(
-                        begin:
-                            widget.style.gradientStart ?? Alignment.topCenter,
+                        begin: widget.style.gradientStart ?? Alignment.topCenter,
                         end: widget.style.gradientEnd ?? Alignment.bottomCenter,
                         colors: [
                           widget.style.accent ?? theme.accentColor,
