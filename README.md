@@ -1,30 +1,17 @@
-# flutter_neumorphic_plus
+# flutter_neumorphic_plus_fork
 
-A complete, ready to use, Neumorphic ui kit for Flutter, fork from 
+This repo is a fork courtesy of: 
 
-[![flutter_logo](https://github.com/gsmlg-dev/Flutter-Neumorphic/blob/master/medias/flutter_logo_small.gif)](https://github.com/gsmlg-dev/Flutter-Neumorphic)
+* https://github.com/gsmlg-dev/Flutter-Neumorphic
 
-Try Flutter-Neumorphic on your browser : 👉 <https://gsmlg-dev.github.io/Flutter-Neumorphic/> 🌐
+Note: **The readme in that package has a link to a working demo of the app.**
 
+The `_plus` package is also available on `Pub.dev` at:
 
-# ⚙️ Installation
+* https://pub.dev/packages/flutter_neumorphic_plus
 
-<https://pub.dev/packages/flutter_neumorphic_plus>
+-----
 
-[![pub package](https://img.shields.io/pub/v/flutter_neumorphic_plus.svg)](
-https://pub.dartlang.org/packages/flutter_neumorphic_plus)
+Additional note: The `flutter_neumorphic_plus` package is a fork of the original `flutter_neumorphic` package.
 
-
-```dart
-dependencies:
-  flutter_neumorphic_plus: ^3.3.0
-
-//requires flutter > 3.0.0
-```
-
-The in your .dart files
-
-```dart
-import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
-```
-
+* https://github.com/Idean/Flutter-Neumorphic?tab=readme-ov-file
