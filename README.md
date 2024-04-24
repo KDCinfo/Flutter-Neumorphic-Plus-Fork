@@ -1,30 +1,23 @@
-# flutter_neumorphic_plus
+# flutter_neumorphic_plus_fork
 
-A complete, ready to use, Neumorphic ui kit for Flutter, fork from
+This repo is a fork courtesy of: 
 
-[![flutter_logo](https://github.com/gsmlg-dev/Flutter-Neumorphic/blob/master/medias/flutter_logo_small.gif)](https://github.com/gsmlg-dev/Flutter-Neumorphic)
+* https://github.com/gsmlg-dev/Flutter-Neumorphic
 
-Try Flutter-Neumorphic on your browser : 👉 <https://gsmlg-dev.github.io/Flutter-Neumorphic/> 🌐
+Note: **The readme in that package has a link to a working demo of the app.**
 
+The `flutter_neumorphic_plus` package this repo was forked from is also available on `Pub.dev` at:
 
-# ⚙️ Installation
+* https://pub.dev/packages/flutter_neumorphic_plus
 
-<https://pub.dev/packages/flutter_neumorphic_plus>
+All I did with this fork was to fix a couple things, add `flutter_lints` and fixed the fallout, and changed the `pubspec.yaml` reference for the `flutter_colorpicker` dependency.
 
-[![pub package](https://img.shields.io/pub/v/flutter_neumorphic_plus.svg)](
-https://pub.dartlang.org/packages/flutter_neumorphic_plus)
+Btw, the first primary commit message was cut off (the CLI didn't like back ticks) and should have read:
 
+> Updated and fixed package with `flutter_lints`.
 
-```dart
-dependencies:
-  flutter_neumorphic_plus: ^3.3.0
+-----
 
-//requires flutter > 3.0.0
-```
+Additional note: The `flutter_neumorphic_plus` package is a fork of the original `flutter_neumorphic` package.
 
-The in your .dart files
-
-```dart
-import 'package:flutter_neumorphic_plus_fork/flutter_neumorphic.dart';
-```
-
+* https://github.com/Idean/Flutter-Neumorphic?tab=readme-ov-file
