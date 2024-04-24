@@ -1,8 +1,8 @@
-import 'package:flutter_neumorphic_example/lib/top_bar.dart';
-import 'package:flutter_neumorphic_example/widgets/appbar/widget_app_bar.dart';
-import 'package:flutter_neumorphic_example/widgets/toggle/widget_toggle.dart';
+import 'package:flutter_neumorphic_plus_fork_example/lib/top_bar.dart';
+import 'package:flutter_neumorphic_plus_fork_example/widgets/appbar/widget_app_bar.dart';
+import 'package:flutter_neumorphic_plus_fork_example/widgets/toggle/widget_toggle.dart';
 
-import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus_fork/flutter_neumorphic.dart';
 
 import 'background/widget_background.dart';
 import 'button/widget_button.dart';

@@ -1,9 +1,9 @@
-import 'package:flutter_neumorphic_example/lib/codex.dart';
-import 'package:flutter_neumorphic_example/lib/theme_configurator.dart';
-import 'package:flutter_neumorphic_example/lib/color_selector.dart';
-import 'package:flutter_neumorphic_example/lib/top_bar.dart';
+import 'package:flutter_neumorphic_plus_fork_example/lib/codex.dart';
+import 'package:flutter_neumorphic_plus_fork_example/lib/theme_configurator.dart';
+import 'package:flutter_neumorphic_plus_fork_example/lib/color_selector.dart';
+import 'package:flutter_neumorphic_plus_fork_example/lib/top_bar.dart';
 
-import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus_fork/flutter_neumorphic.dart';
 
 class IndeterminateProgressWidgetPage extends StatefulWidget {
   const IndeterminateProgressWidgetPage({super.key});

@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/painting.dart';
-import 'package:flutter_neumorphic_plus/src/widget/container.dart';
+import 'package:flutter_neumorphic_plus_fork/src/widget/container.dart';
 
 /// Defines default colors used in Neumorphic theme & shadows generators
 @immutable
@@ -21,13 +21,10 @@ class NeumorphicColors {
   static const Color defaultBorder = Color(0x33000000);
   static const Color darkDefaultBorder = Color(0x33FFFFFF);
 
-  static const Color decorationMaxWhiteColor =
-      Color(0xFFFFFFFF); //for intensity = 1
-  static const Color decorationMaxDarkColor =
-      Color(0x8A000000); //for intensity = 1
+  static const Color decorationMaxWhiteColor = Color(0xFFFFFFFF); //for intensity = 1
+  static const Color decorationMaxDarkColor = Color(0x8A000000); //for intensity = 1
 
-  static const Color embossMaxWhiteColor =
-      Color(0x99FFFFFF); //for intensity = 1
+  static const Color embossMaxWhiteColor = Color(0x99FFFFFF); //for intensity = 1
   static const Color embossMaxDarkColor = Color(0x73000000); //for intensity = 1
 
   static const Color _gradientShaderDarkColor = Color(0x8A000000);
@@ -72,24 +69,20 @@ class NeumorphicColors {
   static Color gradientShaderDarkColor({required double intensity}) {
     // intensity act on opacity;
     return _applyPercentageOnOpacity(
-        maxColor: NeumorphicColors._gradientShaderDarkColor,
-        percent: intensity);
+        maxColor: NeumorphicColors._gradientShaderDarkColor, percent: intensity);
   }
 
   static Color gradientShaderWhiteColor({required double intensity}) {
     // intensity act on opacity;
     return _applyPercentageOnOpacity(
-        maxColor: NeumorphicColors._gradientShaderWhiteColor,
-        percent: intensity);
+        maxColor: NeumorphicColors._gradientShaderWhiteColor, percent: intensity);
   }
 
-  static Color _applyPercentageOnOpacity(
-      {required Color maxColor, required double percent}) {
+  static Color _applyPercentageOnOpacity({required Color maxColor, required double percent}) {
     final maxOpacity = maxColor.opacity;
     final maxIntensity = Neumorphic.MAX_INTENSITY;
     final newOpacity = percent * maxOpacity / maxIntensity;
-    final newColor =
-        maxColor.withOpacity(newOpacity); //<-- intensity act on opacity;
+    final newColor = maxColor.withOpacity(newOpacity); //<-- intensity act on opacity;
     return newColor;
   }
 }

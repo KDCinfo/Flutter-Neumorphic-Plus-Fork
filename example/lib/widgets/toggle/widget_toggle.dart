@@ -1,10 +1,10 @@
 import 'dart:developer';
 
-import 'package:flutter_neumorphic_example/lib/codex.dart';
-import 'package:flutter_neumorphic_example/lib/theme_configurator.dart';
-import 'package:flutter_neumorphic_example/lib/top_bar.dart';
+import 'package:flutter_neumorphic_plus_fork_example/lib/codex.dart';
+import 'package:flutter_neumorphic_plus_fork_example/lib/theme_configurator.dart';
+import 'package:flutter_neumorphic_plus_fork_example/lib/top_bar.dart';
 
-import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus_fork/flutter_neumorphic.dart';
 
 class ToggleWidgetPage extends StatefulWidget {
   const ToggleWidgetPage({super.key});

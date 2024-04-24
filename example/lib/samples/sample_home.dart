@@ -1,12 +1,12 @@
-import 'package:flutter_neumorphic_example/lib/top_bar.dart';
-import 'package:flutter_neumorphic_example/samples/audio_player_sample.dart';
-import 'package:flutter_neumorphic_example/samples/calculator_sample.dart';
-import 'package:flutter_neumorphic_example/samples/clock/clock_sample.dart';
-import 'package:flutter_neumorphic_example/samples/credit_card_sample.dart';
-import 'package:flutter_neumorphic_example/samples/form_sample.dart';
-import 'package:flutter_neumorphic_example/samples/testla_sample.dart';
+import 'package:flutter_neumorphic_plus_fork_example/lib/top_bar.dart';
+import 'package:flutter_neumorphic_plus_fork_example/samples/audio_player_sample.dart';
+import 'package:flutter_neumorphic_plus_fork_example/samples/calculator_sample.dart';
+import 'package:flutter_neumorphic_plus_fork_example/samples/clock/clock_sample.dart';
+import 'package:flutter_neumorphic_plus_fork_example/samples/credit_card_sample.dart';
+import 'package:flutter_neumorphic_plus_fork_example/samples/form_sample.dart';
+import 'package:flutter_neumorphic_plus_fork_example/samples/testla_sample.dart';
 
-import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus_fork/flutter_neumorphic.dart';
 
 import 'galaxy_sample.dart';
 import 'widgets_sample.dart';

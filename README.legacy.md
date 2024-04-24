@@ -26,7 +26,7 @@ dependencies:
 The in your .dart files
 
 ```dart
-import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus_fork/flutter_neumorphic.dart';
 ```
 
 # 🗂 Widgets
@@ -136,7 +136,7 @@ import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
 Neumorphic(
   style: NeumorphicStyle(
     shape: NeumorphicShape.concave,
-    boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)), 
+    boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
     depth: 8,
     lightSource: LightSource.topLeft,
     color: Colors.grey
@@ -376,7 +376,7 @@ Know if using dark
 
 ```dart
 if(NeumorphicTheme.of(context).isUsingDark){
-  
+
 }
 ```
 

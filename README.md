@@ -1,6 +1,6 @@
 # flutter_neumorphic_plus
 
-A complete, ready to use, Neumorphic ui kit for Flutter, fork from 
+A complete, ready to use, Neumorphic ui kit for Flutter, fork from
 
 [![flutter_logo](https://github.com/gsmlg-dev/Flutter-Neumorphic/blob/master/medias/flutter_logo_small.gif)](https://github.com/gsmlg-dev/Flutter-Neumorphic)
 
@@ -25,6 +25,6 @@ dependencies:
 The in your .dart files
 
 ```dart
-import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus_fork/flutter_neumorphic.dart';
 ```
 

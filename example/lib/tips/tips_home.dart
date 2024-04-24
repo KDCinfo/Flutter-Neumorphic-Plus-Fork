@@ -1,6 +1,6 @@
-import 'package:flutter_neumorphic_example/lib/top_bar.dart';
+import 'package:flutter_neumorphic_plus_fork_example/lib/top_bar.dart';
 
-import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus_fork/flutter_neumorphic.dart';
 
 import 'border/tips_border.dart';
 import 'border/tips_emboss_inside_emboss.dart';

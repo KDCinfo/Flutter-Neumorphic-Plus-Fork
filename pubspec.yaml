@@ -1,8 +1,13 @@
-name: flutter_neumorphic_plus
-description: A complete, ready to use, Neumorphic ui kit for Flutter. Dark theming compatible & fully customizable.
-version: 3.3.0
-homepage: https://github.com/gsmlg-dev/Flutter-Neumorphic
-issue_tracker: https://github.com/gsmlg-dev/Flutter-Neumorphic/issues
+name: flutter_neumorphic_plus_fork
+
+description: A forked copy of a ready to use, Neumorphic ui kit for Flutter.
+    Dark theming compatible & fully customizable.
+
+version: 3.3.1
+
+publish_to: none
+
+homepage: https://github.com/KDCinfo/Flutter-Neumorphic-Plus-Fork
 
 environment:
   sdk: ^3.0.0

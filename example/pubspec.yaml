@@ -1,5 +1,5 @@
-name: flutter_neumorphic_example
-description: A new Flutter project.
+name: flutter_neumorphic_plus_fork_example
+description: A fork from a previous neumorphic project.
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -11,7 +11,7 @@ description: A new Flutter project.
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 1.0.0+2
 
 publish_to: none
 
@@ -22,7 +22,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_neumorphic_plus:
+  flutter_neumorphic_plus_fork:
     path: ../
 
   flutter_colorpicker: ^1.0.0

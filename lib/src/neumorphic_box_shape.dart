@@ -1,6 +1,6 @@
-import 'package:flutter_neumorphic_plus/flutter_neumorphic.dart';
-import 'package:flutter_neumorphic_plus/src/shape/rrect_path_provider.dart';
-import 'package:flutter_neumorphic_plus/src/shape/stadium_path_provider.dart';
+import 'package:flutter_neumorphic_plus_fork/flutter_neumorphic.dart';
+import 'package:flutter_neumorphic_plus_fork/src/shape/rrect_path_provider.dart';
+import 'package:flutter_neumorphic_plus_fork/src/shape/stadium_path_provider.dart';
 
 import 'shape/beveled_path_provider.dart';
 import 'shape/circle_path_provider.dart';
